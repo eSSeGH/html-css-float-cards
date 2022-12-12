@@ -23,11 +23,16 @@
     margin-bottom: 40px;
 }
 
+.card-section:last-child {
+    margin-bottom: 40px;
+}
+
 .row {
     margin-bottom: 20px;
 }
 
-.row::after {
+
+.clearfix::after {
     content: "";
     display: block;
     clear: both;
@@ -43,4 +48,33 @@
     padding-right: 20px;
 }
 
+.card {
+    background-color: black;
+    
+}
+
+.card-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.card-name,
+.card-job {
+    color: white;
+}
+
+.card-address {
+    color: lightseagreen;
+    font-style: normal;
+}
+
+.card-job,
+.card-address {
+    font-size: 13px;
+}
+
+.card_img {
+    width: 90px;
+    float: left;
+}
 
