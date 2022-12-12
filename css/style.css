@@ -38,19 +38,25 @@
     clear: both;
 }
 
-.row:last-child {
-    padding-right: 0;
+.row :nth-child(3) {
+    margin-right: 0;
 }
 
 .col {
-    width: calc(100%/3);
+    width: 31.5%;
     float: left;
-    padding-right: 20px;
+    margin-right: 2.75%;
 }
 
 .card {
     background-color: black;
     
+}
+
+.card_text {
+    display: inline-block;
+    padding: 16px 5px;
+    text-align: justify;
 }
 
 .card-name {
