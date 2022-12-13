@@ -6,6 +6,13 @@
     text-align: center;
 }
 
+/* sarebbe meglio mettere sul body il font
+ e il text align perchè in uesto modo hanno
+  una specificità piu bassa dello user agent */
+
+  /* magari ci costruiamo una classettina utility
+  text-align e assegnarla ad hoc */
+
 /* clearfix */
 .clearfix::after {
     content: "";
@@ -14,11 +21,15 @@
 }
 
 /* header */
+
+header {
+    box-shadow: 0 0 50px inset fuchsia;
+}
+
 .page_title {
     font-size: 40px;
     color: rgb(233, 50, 233);
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding: 40px 0;
     font-weight: 800;
 }
 
@@ -43,16 +54,23 @@
 }
 
 
-.row :nth-child(3) {
+/* columns */
+.col {
+    float: left;
+}
+
+.row.row-cols-3 :nth-child(3) {
     margin-right: 0;
 }
 
-/* columns */
-.col {
-    width: 31.5%;
-    float: left;
-    margin-right: 2.75%;
+
+.row-cols-3 > .col {
+    width: calc((100% - 40px) / 3);
+    margin-right: 20px;
 }
+
+/* per rendere il codice riutilizzabile abbiamo creato una classe apposta */
+/* che specifica le grandezze delle colonne se ne dovessero essere 3. */
 
 /* cards */
 .card {
@@ -65,6 +83,10 @@
     padding: 16px 5px;
     text-align: justify;
 }
+
+/* ui hai usato l'inline block per affiancarlo all'immagine ma ti trovi 
+uno spaziettino che non puoi gestire. per eliminarlo puoi dare all'immagine 
+display block come anche alla card-text. */
 
 .card-name {
     font-weight: 800;
